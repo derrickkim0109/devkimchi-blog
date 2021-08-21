@@ -205,18 +205,17 @@ Finally, it sends a confirmation email using a different email template based on
 ![Challenge Update FLow 3][image-10]
 
 
-## Other Power Automate Workflows ##
+## The Others: Other Power Automate Workflows ##
 
 Previously described Power Automate workflows are triggered by GitHub Actions for integration. However, there are other workflows only for management purposes. As most processes are similar to each other, I'm not going to describe them all. Instead, it's the total number of workflows that I used for the event, which is 15 in total.
 
 ![List of Power Automate Workflows][image-04]
 
-
-## Stats ##
-
 Now all my business processes are fully automated. As an operator, I can focus on questions and PR reviews, but nothing else.
 
-Here are some numbers related to this HackaLearn event.
+## The Stats ##
+
+The HackaLearn even was over! Here are some numbers related to this HackaLearn event.
 
 * `14`: Number of days for HackaLearn
 * `171`: Total number of participants
@@ -226,6 +225,32 @@ Here are some numbers related to this HackaLearn event.
 * `16`: Total number of teams who completed provided their GitHub repository
 * `20`: Total number of teams who published their blog post as a retrospective
 * `13`: Total number of teams who completed all six challenges
+
+
+## The Lessons Learnt ##
+
+Surely, there are many spaces for future improvement. What I've learnt from the automation exercise are:
+
+* **Do not assume the way participants create their PRs is expected**
+  
+  👉 The review automation process should be as flexible as possible.
+  <br>
+
+* **Make the review process as simple as possible**
+
+  👉 The reviewers should only be required to focus on the PR, not anything else.
+  <br>
+
+* **Reviewer should be assigned to a team instead of individual PRs**
+
+  👉 If a reviewer is assigned to a team, the chance for merge conflicts will dramatically decrease.
+  <br>
+
+* **Make Power Automate workflows as modular as possible**
+
+  👉 There are many similar sequence of actions across many workflows.
+  👉 They can be modularised into either sub-workflows or custom APIs through custom connectors.
+  <br>
 
 
 ## Side Events ##
