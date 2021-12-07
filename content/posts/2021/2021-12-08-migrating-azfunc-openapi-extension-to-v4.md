@@ -59,3 +59,4 @@ Did I change any codebase? No. All you need to do is to change the extension pac
 [az fncapp core tools]: https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash%2Ckeda&WT.mc_id=dotnet-44909-juyoo
 [az fncapp ga]: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-4-0-and-net-6-support-are-now-generally/ba-p/2933245?WT.mc_id=dotnet-44909-juyoo
 [az fncapp ga openapi]: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/general-availability-of-azure-functions-openapi-extension/ba-p/2931231?WT.mc_id=dotnet-44909-juyoo
+
