@@ -72,4 +72,4 @@ jobs:
     - name: Publish app
       shell: bash
       run: |
-        netlify deploy -p -s ${{ secrets.NETLIFY_SITE_ID }} -a ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        sudo netlify deploy -p -s ${{ secrets.NETLIFY_SITE_ID }} -a ${{ secrets.NETLIFY_AUTH_TOKEN }}
