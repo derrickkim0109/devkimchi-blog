@@ -103,8 +103,17 @@ According to the doc, Azure Functions supports both [Java 8 and 11][az fncapp ja
 
 https://gist.github.com/justinyoo/a41dc3bb8c19141f3844f214593956c8?file=02-pom.xml&highlights=6-7,18-19,32
 
+Here's a catch. If you provision the Azure Functions app instance through Azure Portal, you can choose the Java version.
 
-But, when you actually deploy the app with Java 11, it's deployed perfectly but not accessible. The `pom.xml` only accepts 1.8/8 for Azure deployment, which I suspect it's a bug at the time of this writing. I'm sure it's a known issue. In the meantime, you should target Java 1.8/8 for deployment.
+![Choosing Java Version on Azure Portal][image-10]
+
+However, you MUST explicitly declare the Java version when you provision the instance through bicep or ARM template; otherwise it is set to Java 8 by default. Therefore, if you want to deploy the function app with Java 11, this has to be declared in the bicep file to avoid confusion.
+
+Here's the bicep sample. For the Linux plan, you should declare the `linuxFxVersion` to `Java|11` (line #8). For the Windows plan you should declare the `javaVersion` to `11` (line #11).
+
+https://gist.github.com/justinyoo/a41dc3bb8c19141f3844f214593956c8?file=03-functionapp.bicep&highlights=7-8,10-11
+
+With the higher Java version (ie. Java 11) declared, you can deploy the app compiled in a lower version (ie. Java 8) and run it with no issue. But with the lower version (ie. Java 8) declared, your app compiled in the higher version (ie. Java 11) is deployed but will never work.
 
 ---
 
@@ -120,6 +129,7 @@ So far, we've discussed how to write an Azure Functions app in Java, what possib
 [image-07]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/02/things-to-know-when-writing-azure-functions-in-java-07.png
 [image-08]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/02/things-to-know-when-writing-azure-functions-in-java-08.png
 [image-09]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/02/things-to-know-when-writing-azure-functions-in-java-09.png
+[image-10]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/02/things-to-know-when-writing-azure-functions-in-java-10.png
 
 
 [gh sample]: https://github.com/fusiondevkr/fusiondevkr
