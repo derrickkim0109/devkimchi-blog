@@ -651,7 +651,7 @@ Although we've implemented the autopilot feature through GitHub Actions workflow
 
 ---
 
-So far, we've implemented the autopilot feature using various [GitHub Actions][gh actions] triggers and [Azure Bicep][az bicep]. So now, when you need to show off your PoC to your clients, as long as anyone can access your repository, they can create resources and deploy the app by themselves without having to learn deployment details.
+So far, we've implemented the autopilot feature using various [GitHub Actions][gh actions] triggers and [Azure Bicep][az bicep]. So now, when you need to show off your PoC to your clients, as long as anyone can access your repository, they can create resources and deploy the app by themselves without having to learn deployment details. In the [next post][post 2], let's revise this autopilot feature with no GitHub Actions event triggers.
 
 
 [image-01]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/03/azure-apps-autopilot-01.png
@@ -663,6 +663,9 @@ So far, we've implemented the autopilot feature using various [GitHub Actions][g
 [image-07]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/03/azure-apps-autopilot-07.png
 [image-08]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/03/azure-apps-autopilot-08.png
 
+
+[post 1]: /2022/03/11/azure-apps-autopilot/
+[post 2]: /2022/04/06/azure-bicep-deployment-script/
 
 [az bicep]: https://docs.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep&WT.mc_id=dotnet-59944-juyoo
 [az bicep deploymentscript]: https://docs.microsoft.com/azure/azure-resource-manager/bicep/deployment-script-bicep?WT.mc_id=dotnet-59944-juyoo
