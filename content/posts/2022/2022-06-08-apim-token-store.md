@@ -2,7 +2,7 @@
 title: "Efficient OAuth Authorisation Management in Azure API Management"
 slug: apim-token-store
 description: "Throughout this post, I'm going to discuss how efficiently manage OAuth authorisations using Azure API Management."
-date: "2022-06-10"
+date: "2022-06-08"
 author: Justin-Yoo
 tags:
 - azure
@@ -32,7 +32,7 @@ Using the auth key approach, you can store it in a safe place like the [Azure Ke
 
 > If you want to know more about the OAuth auth process, please refer to [this doc][oauth flow concept].
 
-Therefore, developers should implement those processes as a part of the application development. You might be lucky if the service you want to use offers an SDK. If not, you should do it all by yourself, which is very cumbersome. What if someone does all the tedious steps for you? Let's say, within the secure place, someone does all the auth process on your behalf and simply returns the access token. If this happens, your application development velocity will increase significantly. [Azure API Management (APIM)][az apim] has recently released a preview feature called "Authorisations" that does the OAuth process on your behalf. Throughout this post, I'm going to discuss this feature using a [Blazor Web Assembly (WASM) app][blazor wasm] hosted on [Azure Static Web Apps (SWA)][az swa].
+Therefore, developers should implement those processes as a part of the application development. You might be lucky if the service you want to use offers an SDK. If not, you should do it all by yourself, which is very cumbersome. What if someone does all the tedious steps for you? Let's say, within the secure place, someone does all the auth process on your behalf and simply returns the access token. If this happens, your application development velocity will increase significantly. [Azure API Management (APIM)][az apim] has recently released a [preview feature called "Authorisations"][az apim tokenstore] that does the OAuth process on your behalf. Throughout this post, I'm going to discuss this feature using a [Blazor Web Assembly (WASM) app][blazor wasm] hosted on [Azure Static Web Apps (SWA)][az swa].
 
 > You can find the sample apps used in this post at [this GitHub repository][gh sample].
 
@@ -487,7 +487,7 @@ If you want to know more about this APIM OAuth authorisation management feature,
 [image-22]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/06/apim-token-store-22.png
 
 
-[post 1]: .
+[post 1]: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-a-token-store-with-apim-authorizations/ba-p/3453516?WT.mc_id=dotnet-57408-juyoo
 
 [gh sample]: https://github.com/aaronpowell/token-store-demo
 
@@ -501,7 +501,7 @@ If you want to know more about this APIM OAuth authorisation management feature,
 
 [az apim]: https://docs.microsoft.com/azure/api-management/api-management-key-concepts?WT.mc_id=dotnet-57408-juyoo
 [az apim mi]: https://docs.microsoft.com/azure/api-management/api-management-howto-use-managed-service-identity?WT.mc_id=dotnet-57408-juyoo
-[az apim tokenstore]: .
+[az apim tokenstore]: https://docs.microsoft.com/azure/api-management/authorizations-overview?WT.mc_id=dotnet-57408-juyoo
 
 [az kv]: https://docs.microsoft.com/azure/key-vault/general/basic-concepts?WT.mc_id=dotnet-57408-juyoo
 
