@@ -285,7 +285,7 @@ Your existing JavaScript-based Chrome extension has now successfully been migrat
 
 ---
 
-So far, we've migrated the JavaScript-based Chrome extension app to [Blazor WebAssembly][blazor wasm] with minimal code changes. Both extensions are almost identical, except for a couple of points. In other words, your extension can easily be migrated using the "lift & shift" approach. However, it doesn't entirely make use of the powerful [JS interop][blazor wasm jsinterop] feature yet. In the next post, let's explore how we can use the JS interop feature more for this migration.
+So far, we've migrated the JavaScript-based Chrome extension app to [Blazor WebAssembly][blazor wasm] with minimal code changes. Both extensions are almost identical, except for a couple of points. In other words, your extension can easily be migrated using the "lift & shift" approach. However, it doesn't entirely make use of the powerful [JS interop][blazor wasm jsinterop] feature yet. In the [next post][post 2], let's explore how we can use the JS interop feature more for this migration.
 
 
 ## Do you want to know more about Blazor? ##
@@ -316,6 +316,9 @@ Here are some tutorials for you.
 [image-17]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/07/lift-and-shift-existing-chrome-extension-to-blazor-wasm-17-ko.png
 [image-18]: https://sa0blogs.blob.core.windows.net/devkimchi/2022/07/lift-and-shift-existing-chrome-extension-to-blazor-wasm-18-ko.png
 
+
+[post 1]: /2022/07/08/lift-and-shift-existing-chrome-extension-to-blazor-wasm/
+[post 2]: /2022/07/20/lift-and-shift-existing-chrome-extension-to-blazor-wasm-2/
 
 [gh sample]: https://github.com/devkimchi/blazor-wasm-chrome-extension/tree/the-migration
 [gh sample v2 original]: https://github.com/devkimchi/blazor-wasm-chrome-extension/tree/the-migration/src/chrome-extension-v2
