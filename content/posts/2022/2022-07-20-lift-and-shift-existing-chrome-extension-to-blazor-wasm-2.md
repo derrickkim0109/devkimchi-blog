@@ -256,7 +256,12 @@ So far, we've walked through how to take more advantage of the [JS Interop][blaz
 1. We never touch any bootstrapper codes that Blazor WASM generate for us.
 2. If necessary, we load JavaScript for each page using the JS Interop feature. During this practice, C# handles all the JS codes.
 
-If we use more JS Interop features, we can build the Blazor WASM app more effectively, which will be another option for building Chrome extensions.
+Then, does this exercise only brings you benefits? Here are a couple of considerations:
+
+1. The code gets overly complex. If we simply import the JavaScript files through the `index.html`/`popup.html`/`options.html`, we don't need to do this exercise.
+2. Not everytime the dynamic JS loading is useful. It has trade-offs. If you don't want to touch the bootstrapper files, then try this approach discussed in this post. But if you do touch the bootstrapper files, then this dynamic JS loading approach may be unsuitable.
+
+Overall, if we use more JS Interop features appropriately, we can build the Blazor WASM app more effectively, which will be another option for building Chrome extensions.
 
 
 ## Do you want to know more about Blazor? ##
